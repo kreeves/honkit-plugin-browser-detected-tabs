@@ -33,7 +33,6 @@
 
     var toggleOSContent = function(os) {
         document.querySelectorAll('[data-os-content]').forEach(function(element) {
-            console.log(os);
             if (element.getAttribute('data-os-content') === os) {
                 element.style.display = '';
             } else {

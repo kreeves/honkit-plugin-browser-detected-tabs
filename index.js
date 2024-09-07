@@ -17,7 +17,6 @@ module.exports = {
     blocks: {
         osContent: {
             process: function (block) {
-                // return "HEY";
                 // console.log(block);
                 const targetOS = block.args[0];
                 const parsedContent = marked(block.body);
