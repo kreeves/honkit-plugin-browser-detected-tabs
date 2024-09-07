@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "Tabbed browsing navigation with browser detection",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "exit 0"
+  },
   "engines": {
     "honkit": ">1.x.x"
   },
