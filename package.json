@@ -3,9 +3,7 @@
   "version": "0.0.1",
   "description": "Tabbed browsing navigation with browser detection",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "engines": {
     "honkit": ">1.x.x"
   },
@@ -21,6 +19,5 @@
   "dependencies": {
     "detect-browser": "^5.3.0",
     "marked": "^13.0.2"
-  },
-  "private": true
+  }
 }
