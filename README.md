@@ -27,11 +27,9 @@ To use the browser detected tabs in your Honkit book, you can use the custom `{%
 A full example is below which includes the navigation buttons needed by the plug-in.
 #### Example
 ```markdown
-<nav id="osNav">
-    <a href="#" class="osToggle" data-os="Windows">Windows</a>
-    <a href="#" class="osToggle" data-os="Mac">Mac</a>
-    <a href="#" class="osToggle" data-os="Linux">Linux</a>
-</nav>
+<button class="osToggle" data-os="Windows">Windows</button>
+<button class="osToggle" data-os="Mac">Mac</button>
+<button class="osToggle" data-os="Linux">Linux</button>
 
 {% osContent "Mac" %}
 This content is only visible on macOS.
