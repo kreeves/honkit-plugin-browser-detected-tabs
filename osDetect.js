@@ -31,15 +31,6 @@
         initializeContentByOs();
     }
 
-    // Set default active button based on detected OS
-    var os = detectOS();
-    var defaultButton = document.querySelector(`.osToggle[data-os="${os}"]`);
-    if (defaultButton) {
-        document.querySelectorAll(`.osToggle[data-os="${os}"]`).forEach(button => {
-            button.classList.add('active');
-        });
-    }
-
     var toggleOSContent = function(os) {
         document.querySelectorAll('[data-os-content]').forEach(function(element) {
             if (element.getAttribute('data-os-content') === os) {
@@ -52,8 +43,8 @@
 
     document.querySelectorAll('button[class="osToggle"]').forEach(function(button) {
         button.addEventListener('click', function() {
-            var os = this.getAttribute('data-os'); // Use the data-os attribute to determine which content to show
-            toggleOSContent(os);
+            var selectedOs = this.getAttribute('data-os'); // Use the data-os attribute to determine which content to show
+            toggleOSContent(selectedOs);
         });
     });
 
@@ -67,13 +58,23 @@
             });
 
             // Get the data-os attribute of the clicked button
-            const os = this.getAttribute('data-os');
+            const currentOs = this.getAttribute('data-os');
 
             // Add active class to all buttons with the same data-os attribute
-            document.querySelectorAll(`.osToggle[data-os="${os}"]`).forEach(item => {
+            document.querySelectorAll(`.osToggle[data-os="${currentOs}"]`).forEach(item => {
                 item.classList.add('active');
             });
         });
     });
+
+    // Set default active button based on detected OS
+    var os = detectOS();
+    var defaultButton = document.querySelector(`.osToggle[data-os="${os}"]`);
+    if (defaultButton) {
+        document.querySelectorAll(`.osToggle[data-os="${os}"]`).forEach(button => {
+            button.classList.add('active');
+        });
+    }
+
 
 })();
