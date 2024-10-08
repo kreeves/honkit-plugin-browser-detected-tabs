@@ -1,6 +1,6 @@
 {
   "name": "honkit-plugin-browser-detected-tabs",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Tabbed browsing navigation with browser detection",
   "main": "index.js",
   "scripts": {
